@@ -1,0 +1,270 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e8ebe4;
+  color: #1b1f21;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar contactos */
+.sidebar {
+  flex: 0 0 25%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Sección principal */
+.main {
+  flex: 1;
+  background-color: #d4dcff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.main-content h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.main-content p {
+  font-size: 16px;
+  color: #444749;
+}
+
+/* Estado del usuario */
+.user-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-icons i {
+  margin-left: 10px;
+  color: #828485;
+  cursor: pointer;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-text h4 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #1b1f21;
+}
+
+.user-sub {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-icon {
+  font-size: 10px;
+  color: #28a745; /* verde tipo “online” */
+}
+
+.user-state {
+  font-size: 12px;
+  color: #828485;
+}
+
+.user-divider {
+  border: none;
+  border-top: 1px solid #e8ebe4;
+  margin: 1rem 0;
+}
+
+/* Lista de contactos */
+.contacts-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #e8ebe4; /* Borde gris claro */
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Sombra leve */
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact:hover {
+  background-color: #cdc3e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.contact-info h4 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #1b1f21;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #828485;
+}
+
+/* Botón nuevo chat */
+.new-chat {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.btn-primary {
+  background-color: #a491d2;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e94f37;
+}
+
+/* Responsivo para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .main {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .main-content h1 {
+    font-size: 32px;
+  }
+
+  .contact-img,
+  .user-img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Para celulares aún más pequeños */
+@media (max-width: 480px) {
+  .main-content h1 {
+    font-size: 24px;
+  }
+
+  .contact-info h4 {
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
+}
+
+.contacts-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(
+    100vh - 200px
+  ); /* Aproximado, puedes ajustar según tu layout */
+  padding-right: 0.5rem;
+}
+
+/* Scrollbar estilizado (opcional) */
+.contacts-list::-webkit-scrollbar {
+  width: 5px;
+}
+.contacts-list::-webkit-scrollbar-thumb {
+  background-color: #bec1bb;
+  border-radius: 10px;
+}
+
+.special-button {
+  background-color: #ef7f6d; /* Salmon */
+  color: #fff;
+  border: 2px solid #e94f37; /* Carmine Pink */
+  padding: 0.6rem 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  border-radius: 25px;
+  box-shadow: 0 0 0 3px #f7bfb6; /* Spanish pink como borde externo */
+  transition: all 0.3s ease;
+}
+
+.special-button:hover {
+  background-color: #e94f37; /* fondo más intenso al pasar el mouse */
+  box-shadow: 0 0 0 3px #a491d2; /* cambia a lavanda en hover */
+  transform: scale(1.05);
+}
