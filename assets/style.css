@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -102,7 +101,7 @@ body {
 
 .status-icon {
   font-size: 10px;
-  color: #28a745; /* verde tipo “online” */
+  color: #28a745;
 }
 
 .user-state {
@@ -131,9 +130,9 @@ body {
   gap: 0.75rem;
   padding: 0.75rem;
   border-radius: 12px;
-  border: 1px solid #e8ebe4; /* Borde gris claro */
+  border: 1px solid #e8ebe4;
   background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Sombra leve */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
   transition: background 0.3s, box-shadow 0.3s;
 }
 
@@ -184,7 +183,7 @@ body {
   background-color: #e94f37;
 }
 
-/* Responsivo para pantallas medianas (tablets) */
+/* Responsive*/
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -218,7 +217,6 @@ body {
   }
 }
 
-/* Para celulares aún más pequeños */
 @media (max-width: 480px) {
   .main-content h1 {
     font-size: 24px;
@@ -236,13 +234,11 @@ body {
 .contacts-list {
   flex: 1;
   overflow-y: auto;
-  max-height: calc(
-    100vh - 200px
-  ); /* Aproximado, puedes ajustar según tu layout */
+  max-height: calc(100vh - 200px);
   padding-right: 0.5rem;
 }
 
-/* Scrollbar estilizado (opcional) */
+/* Scrollbar */
 .contacts-list::-webkit-scrollbar {
   width: 5px;
 }
@@ -252,19 +248,19 @@ body {
 }
 
 .special-button {
-  background-color: #ef7f6d; /* Salmon */
+  background-color: #ef7f6d;
   color: #fff;
-  border: 2px solid #e94f37; /* Carmine Pink */
+  border: 2px solid #e94f37;
   padding: 0.6rem 1.2rem;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   border-radius: 25px;
-  box-shadow: 0 0 0 3px #f7bfb6; /* Spanish pink como borde externo */
+  box-shadow: 0 0 0 3px #f7bfb6;
   transition: all 0.3s ease;
 }
 
 .special-button:hover {
-  background-color: #e94f37; /* fondo más intenso al pasar el mouse */
-  box-shadow: 0 0 0 3px #a491d2; /* cambia a lavanda en hover */
+  background-color: #e94f37;
+  box-shadow: 0 0 0 3px #a491d2;
   transform: scale(1.05);
 }
